@@ -19,7 +19,7 @@ contract SaveToken {
 
     function deposit(uint256 _amount) external {
         require(msg.sender != address(0), "address zero detected");
-        require(_amount > 0, "can't save zero value");
+        require(_amount > 0, "Can't save zero value");
         require(
             IERC20(savingToken).balanceOf(msg.sender) >= _amount,
             "not enough token"
